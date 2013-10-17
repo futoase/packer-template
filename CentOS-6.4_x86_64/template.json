@@ -7,6 +7,7 @@
         "scripts/vagrant.sh",
         "scripts/virtualbox.sh",
         "scripts/epel.sh",
+        "scripts/chef.sh",
         "scripts/cleanup.sh"
       ],
       "override": {
