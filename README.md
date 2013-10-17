@@ -12,6 +12,7 @@ How to use
 2. Download [Packer](http://www.packer.io/).
 3. Execute command of ```packer build template.json```.
 4. Build Vagrant box!
+5. Execute command of ```vagrant box add new-vagrant-box-name build.box```.
 
 License
 -------
