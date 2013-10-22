@@ -19,8 +19,9 @@ Running Vagrant
 
 1. Download [Vagrant](http://www.vagrantup.com/).
 2. Install [vagrant-omnibus-plugin](https://github.com/schisamo/vagrant-omnibus)
-3. Execute command of ```vagrant up```
-4. Provision chef ```vagrant provision```
+3. Install [vagrant-berkshelf-plugin](https://github.com/riotgames/vagrant-berkshelf)
+4. Execute command of ```vagrant up```
+5. Provision chef ```vagrant provision```
 
 License
 -------
