@@ -7,11 +7,10 @@
         "scripts/vagrant.sh",
         "scripts/virtualbox.sh",
         "scripts/epel.sh",
-        "scripts/chef.sh",
         "scripts/cleanup.sh"
       ],
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         }
       }
@@ -19,7 +18,7 @@
   ],
   "builders": [
     {
-      "type": "virtualbox",
+      "type": "virtualbox-iso",
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
@@ -43,19 +42,19 @@
           "modifyvm",
           "{{.Name}}",
           "--memory",
-          "1024"
+          "512"
         ],
         [
           "modifyvm",
           "{{.Name}}",
           "--cpus",
-          "2"
+          "1"
         ],
         [
           "modifyvm",
           "{{.Name}}",
           "--cpuexecutioncap",
-          "75" 
+          "100" 
         ]
       ]
     }
@@ -63,7 +62,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "./CentOS-6.4-x86_64-mininal.box"
+      "output": "./builds/CentOS-6.4-x86_64-mininal.box"
     }
   ]
 }
